@@ -1,2 +1,2 @@
-# The TeamVoided Template
-Template mod by TeamVoided
+# Plushed
+I’m going to turn all of you in to marketable plushies
