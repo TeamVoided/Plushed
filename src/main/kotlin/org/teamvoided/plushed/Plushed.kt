@@ -5,8 +5,13 @@ import net.minecraft.resources.Identifier
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.teamvoided.plushed.config.PlushedConfig
-import org.teamvoided.plushed.init.PlushedBlocks
-import org.teamvoided.plushed.init.PlushedItems
+import org.teamvoided.plushed.init.PlushBlockEntityTypes
+import org.teamvoided.plushed.init.PlushBlocks
+import org.teamvoided.plushed.init.PlushDataComponents
+import org.teamvoided.plushed.init.PlushItems
+import org.teamvoided.plushed.init.PlushRegistries
+import org.teamvoided.plushed.init.PlushStats
+import org.teamvoided.plushed.init.PlushTabs
 
 object Plushed {
 
@@ -19,9 +24,14 @@ object Plushed {
     var config = ConfigApi.registerAndLoadConfig(::PlushedConfig)
 
     fun init() {
-        log.info("Hello from Common ${config.commonEntry.get()}")
-        PlushedItems.init()
-        PlushedBlocks.init()
+        log.info("I’m going to turn all of you in to marketable plushies!")
+        PlushRegistries.init()
+        PlushStats.init()
+        PlushBlocks.init()
+        PlushDataComponents.init()
+        PlushItems.init()
+        PlushBlockEntityTypes.init()
+        PlushTabs.init()
     }
 
     fun id(namespace: String, path: String): Identifier = Identifier.fromNamespaceAndPath(namespace, path)

@@ -12,12 +12,12 @@ class EnLangProvider(var output: FabricDataOutput, p: CompletableFuture<HolderLo
     FabricLanguageProvider(output, p) {
 
     override fun generateTranslations(lookup: HolderLookup.Provider, gen: TranslationBuilder) {
-        getModHolders(BuiltInRegistries.ITEM).forEach {
-            gen.add(it.value(), genLang(it.key().identifier()))
-        }
-        getModHolders(BuiltInRegistries.BLOCK).forEach {
-            trySafe { gen.add(it.value(), genLang(it.key().identifier())) }
-        }
+        getModHolders(BuiltInRegistries.ITEM)
+            .forEach { gen.add(it.value(), genLang(it.key().identifier())) }
+        getModHolders(BuiltInRegistries.BLOCK)
+            .forEach { trySafe { gen.add(it.value(), genLang(it.key().identifier())) } }
+        getModHolders(BuiltInRegistries.CREATIVE_MODE_TAB)
+            .forEach { gen.add(it.key(), genLang(it.key().identifier())) }
 
     }
 

@@ -4,7 +4,7 @@ import net.minecraft.core.registries.Registries
 import org.teamvoided.plushed.Plushed.id
 import org.teamvoided.plushed.util.tag
 
-object PlushedItemTags {
+object PlushItemTags {
 
     val APPLE_LIKE = create("apple_like")
 

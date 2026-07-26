@@ -5,8 +5,8 @@ package org.teamvoided.plushed.util
 import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.core.Holder
 import net.minecraft.core.Registry
-import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.Identifier
+import net.minecraft.resources.ResourceKey
 import net.minecraft.tags.TagKey
 import org.teamvoided.plushed.Plushed.MODID
 

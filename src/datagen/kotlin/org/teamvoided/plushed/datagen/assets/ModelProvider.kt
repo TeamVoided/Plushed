@@ -5,12 +5,12 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.minecraft.client.data.models.BlockModelGenerators
 import net.minecraft.client.data.models.ItemModelGenerators
+import org.teamvoided.plushed.init.PlushBlocks
 
 class ModelProvider(o: FabricDataOutput) : FabricModelProvider(o) {
 
     override fun generateBlockStateModels(gen: BlockModelGenerators) {
-//        gen.createTrivialCube(TemplateBlocks.APPLE_BLOCK)
-//        gen.createTrivialBlock(TemplateBlocks.SPECIAL_APPLE_BLOCK, TexturedModel.LEAVES)
+        gen.createTrivialCube(PlushBlocks.PLUSHIE_BLOCK)
     }
 
 //    val single = listOf(TemplateItems.APPLE_2)
